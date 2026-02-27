@@ -1,4 +1,7 @@
 print("------------------------------------------")
+print("------------REGISTRO DE VENRAS------------")
+print("------------------------------------------")
+print("")
 
 # Validar nombre (que no sea vacío ni solo números)
 while True:
@@ -54,10 +57,14 @@ if vip:
 else:
     total = subtotal
 
+iva = subtotal * 0.19
+total += iva
+
 print("------------------------------------------")
 print("Cliente:", nombres)
 print("Precio:", precio)
 print("Cantidad:", cantidad_compra)
 print("Es VIP?:", "Sí" if vip else "No")
+print("IVA 19%:", iva)
 print("Total a pagar: $", round(total, 2))
 print("------------------------------------------")
