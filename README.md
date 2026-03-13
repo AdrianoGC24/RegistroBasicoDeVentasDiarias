@@ -46,7 +46,7 @@ Producto: Arroz | Precio: 3500.0 | Cantidad: 12 | Total: 42000.0
 ---
 
 ## Conceptos aplicados
-| Concepto (ES)        |
+| Concepto             |
 |----------------------|
 | Variables            |
 | Entrada del usuario  |
