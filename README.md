@@ -29,7 +29,7 @@ Programa de consola desarrollado en Python que permite registrar un producto en 
 Asegúrate de tener Python 3 instalado. Luego, en la terminal ejecuta:
 
 ```bash
-python3 inventario.py
+python3 main.py
 ```
 
 ---
