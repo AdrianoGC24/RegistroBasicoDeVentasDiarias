@@ -1,4 +1,4 @@
-# 📦 Gestión de Inventario / Inventory Management
+# 📦 Gestión de Inventario
 
 ## Descripción 
 
