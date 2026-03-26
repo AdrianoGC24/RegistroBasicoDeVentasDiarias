@@ -151,29 +151,34 @@ def actualizar_producto(inventario, nuevo_precio=None, nueva_cantidad=None):
         nuevo_precio (float, optional): Precio de reemplazo (no usado en la versión interactiva).
         nueva_cantidad (int, optional): Cantidad de reemplazo (no usado en la versión interactiva).
     """
-    buscar_nombre = input("Escribe el nombre del producto que quieres actualizar: ")
-    encontrado = False
  
-    for producto in inventario:
-        if producto['nombre'].lower() == buscar_nombre.lower():
-            print("\nProducto encontrado")
-            print(f"|{producto['nombre']:<20} |${producto['precio']:>9.2f} |{producto['cantidad']:>9} unidades")
- 
-            nuevo_nombre = input("\nIngrese el nuevo nombre: ")
-            nuevo_precio = float(input("Ingrese el nuevo precio: "))
-            nueva_cantidad = int(input("Ingrese la nueva cantidad: "))
- 
-            producto["nombre"] = nuevo_nombre
-            producto["precio"] = nuevo_precio
-            producto["cantidad"] = nueva_cantidad
- 
-            print("\nDatos actualizados: ")
-            print(f"|{producto['nombre']:<20} |${producto['precio']:>9.2f} |{producto['cantidad']:>9} unidades")
-            encontrado = True
-            break
- 
-    if not encontrado:
-        print("Producto no encontrado")
+    try:
+        buscar_nombre = input("Escribe el nombre del producto que quieres actualizar: ")
+        encontrado = False
+    
+        for producto in inventario:
+            if producto['nombre'].lower() == buscar_nombre.lower():
+                print("\nProducto encontrado")
+                print(f"|{producto['nombre']:<20} |${producto['precio']:>9.2f} |{producto['cantidad']:>9} unidades")
+    
+                nuevo_nombre = input("\nIngrese el nuevo nombre: ")
+                nuevo_precio = float(input("Ingrese el nuevo precio: "))
+                nueva_cantidad = int(input("Ingrese la nueva cantidad: "))
+    
+                producto["nombre"] = nuevo_nombre
+                producto["precio"] = nuevo_precio
+                producto["cantidad"] = nueva_cantidad
+    
+                print("\nDatos actualizados: ")
+                print(f"|{producto['nombre']:<20} |${producto['precio']:>9.2f} |{producto['cantidad']:>9} unidades")
+                encontrado = True
+                break
+    
+        if not encontrado:
+            print("Producto no encontrado")
+    except ValueError:
+        print("Error ingrese solo numeros")
+        return None
  
  
 def eliminar_producto(inventario):
